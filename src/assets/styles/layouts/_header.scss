@@ -1,0 +1,100 @@
+.menu {
+  padding-right: $navbar-padding-x-lg;
+  padding-left: $navbar-padding-x-lg;
+
+  @media (max-width: 992px) {
+    padding-right: $navbar-padding-x-md;
+    padding-left: $navbar-padding-x-md;
+  }
+
+  @media (max-width: 767px) {
+    padding-right: $navbar-padding-x-xs;
+    padding-left: $navbar-padding-x-xs;
+  }
+
+  &__navbar {
+    background-color: transparent;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    font-size: $menu-font-size;
+    font-weight: bold;
+    color: $menu-color-blue;
+
+    &:hover {
+      /* stylelint-disable-next-line scss/no-global-function-names */
+      color: adjust-color($menu-color-blue, $lightness: -10%);
+    }
+
+    @media (max-width: 992px) {
+      font-size: $menu-font-size-tablet;
+    }
+
+    @media (max-width: 767px) {
+      font-size: $menu-font-size-mobile;
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: $menu-color-blue;
+  }
+
+  &__toggle {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__toggle-icon {
+    filter: brightness(0.5);
+  }
+
+  &__collapse {
+    &.show {
+      background-color: transparent;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  &__item {
+    font-size: $menu-font-size;
+    font-weight: bold;
+    color: $menu-color-blue;
+
+    &:hover {
+      /* stylelint-disable-next-line scss/no-global-function-names */
+      color: adjust-color($menu-color-blue, $lightness: -15%);
+      text-decoration: underline;
+    }
+
+    &--active {
+      /* stylelint-disable-next-line scss/no-global-function-names */
+      color: adjust-color($menu-color-blue, $lightness: -20%);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 992px) {
+      font-size: $menu-font-size-tablet;
+    }
+
+    @media (max-width: 767px) {
+      font-size: $menu-font-size-mobile;
+    }
+  }
+}

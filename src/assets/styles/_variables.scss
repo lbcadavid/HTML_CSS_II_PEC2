@@ -1,0 +1,29 @@
+@use "sass:color";
+
+$main-color: #025fc4;
+$black-color: #333;
+
+/**
+ *  Variable del header
+ */
+$menu-color-blue: #0056b3;
+$menu-font-size: 18px;
+$menu-font-size-tablet: 16px;
+$menu-font-size-mobile: 14px;
+
+/**
+ *  Variables Boostrap Header
+ */
+$navbar-padding-y: 25px;
+
+$carousel-control-color: #fff;
+$carousel-control-width: 5%;
+$carousel-control-icon-width: 2rem;
+$btn-color: #1d4a7a;
+$btn-box-shadow:
+  inset 0 1px 0 rgba($carousel-control-color, 0.15),
+  0 1px 1px rgba($black-color, 0.075);
+
+$navbar-padding-x-xs: 10px;
+$navbar-padding-x-md: 15px;
+$navbar-padding-x-lg: 15vh;

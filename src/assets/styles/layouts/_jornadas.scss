@@ -1,0 +1,182 @@
+@layer base, base2, base3;
+
+.hrline {
+  container-type: inline-size;
+  padding-right: 40vh;
+  padding-left: 40vh;
+
+  @container (max-width: 1200px) {
+    padding-right: 10vh;
+    padding-left: 10vh;
+  }
+
+  @container (max-width: 767px) {
+    padding-right: $navbar-padding-x-xs;
+    padding-left: $navbar-padding-x-xs;
+  }
+}
+
+@layer base3 {
+  .base3 {
+    container-type: inline-size;
+
+    .imagenes {
+      width: 80%;
+      margin: 0 auto;
+
+      &__entero {
+        width: 100%;
+        height: 75vh;
+        overflow: hidden;
+
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @container (max-width: 767px) {
+      .imagenes {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@layer base2 {
+  .base2 {
+    .imagenes {
+      container-type: inline-size;
+      width: 100%;
+
+      &__entero {
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        max-width: 60vh;
+        font-size: 52px !important;
+        font-weight: bold !important;
+      }
+
+      p {
+        top: 60%;
+        font-size: 18px;
+        font-weight: bold;
+        color: $main-color;
+        -webkit-text-stroke: 0.1px black;
+      }
+
+      @container (max-width: 1200px) {
+        h2 {
+          font-size: 42px !important;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      @container (max-width: 767px) {
+        h2 {
+          font-size: 34px !important;
+        }
+
+        p {
+          top: 65%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@layer base {
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+
+    :where(h5, p) {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__main {
+      flex-grow: 1;
+      padding-right: 40vh;
+      padding-left: 40vh;
+
+      .col-12:has(.d-flex:hover) {
+        background-color: #ececec;
+        transition: background-color 0.3s ease;
+      }
+
+      &__big {
+        p {
+          font-size: 35px;
+          color: $main-color;
+        }
+      }
+
+      &__normal {
+        p {
+          font-size: 22px;
+          color: $main-color;
+        }
+      }
+    }
+
+    @container (max-width: 1200px) {
+      &__main {
+        padding-right: 10vh;
+        padding-left: 10vh;
+
+        &__big {
+          p {
+            font-size: 30px;
+            color: $main-color;
+          }
+        }
+
+        &__normal {
+          p {
+            font-size: 20px;
+            color: $main-color;
+          }
+        }
+      }
+    }
+
+    @container (max-width: 767px) {
+      &__main {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        &__big {
+          p {
+            font-size: 22px;
+            color: $main-color;
+          }
+        }
+
+        &__normal {
+          p {
+            font-size: 18px;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

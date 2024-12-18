@@ -1,0 +1,60 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  container-type: inline-size;
+
+  &__main {
+    flex-grow: 1;
+    padding-right: 40vh;
+    padding-left: 40vh;
+
+    p,
+    label {
+      font-size: 18px;
+      color: $main-color;
+    }
+  }
+
+  @container (max-width: 1200px) {
+    &__main {
+      padding-right: 10vh;
+      padding-left: 10vh;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    p,
+    label {
+      font-size: 16px;
+    }
+  }
+
+  @container (max-width: 767px) {
+    &__main {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p,
+    label {
+      font-size: 14px;
+    }
+  }
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-size: 36px;
+  color: $main-color;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}

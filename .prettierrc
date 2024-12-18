@@ -1,0 +1,9 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "htmlWhitespaceSensitivity": "ignore",
+  "insertFinalNewline": true,
+  "endOfLine": "lf",
+  "trailingComma": "none"
+}

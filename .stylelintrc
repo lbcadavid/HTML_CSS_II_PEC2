@@ -1,0 +1,39 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-prettier", "stylelint-selector-bem-pattern"],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "declaration-block-single-line-max-declarations": 1,
+    "no-invalid-double-slash-comments": true,
+    "color-function-notation": "modern",
+    "color-hex-length": "short",
+    "selector-attribute-quotes": "always",
+    "length-zero-no-unit": true,
+    "shorthand-property-no-redundant-values": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/operator-no-unspaced": true,
+    "comment-no-empty": true,
+    "comment-word-disallowed-list": ["todo", "fixme", "hack"],
+    "selector-class-pattern": "^[a-z0-9\\-]+$",
+    "selector-combinator-allowed-list": [">", "+", "~"],
+    "selector-max-id": 0,
+    "selector-max-class": 3,
+    "selector-max-combinators": 3,
+    "block-no-empty": true,
+    "no-descending-specificity": true,
+    "no-duplicate-selectors": true,
+    "scss/at-import-partial-extension": "never",
+
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "componentName": "[A-Z][a-zA-Z0-9]+",
+      "componentSelectors": {
+        "initial": "^\\.{component}(?:__[-a-z0-9]+)?(?:--[-a-z0-9]+)?$"
+      },
+      "utilitySelectors": "^\\.u-[a-z0-9]+$"
+    }
+  }
+}
